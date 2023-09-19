@@ -1,0 +1,138 @@
+
+.navigation{
+    position: sticky;
+    top:0;
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    min-height: 100vh;
+    color: rgb(255, 255, 255);
+    background: #FF512F;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #DD2476, #FF512F);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #DD2476, #FF512F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    transition: 0.1s ease-in-out;
+    padding: 5px 10px;
+    overflow: hidden;
+}
+
+.navigation.dark{
+    color: rgb(0, 0, 0);
+    background: #536976;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #292E49, #536976);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #292E49, #536976); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    
+ 
+}
+
+.navigation.active{
+    width: max-content;
+}
+
+
+.navigation .menu{
+    position: absolute;
+    right: 10px;
+    top: 0;
+    margin-left: auto;
+    font-size: 18px;
+    height:35px;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.navigation.active .menu{
+    position: relative;
+}
+
+.navigation .menu.active{
+    rotate: 180deg;
+}
+.navigation header{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 25px 0px 15px;
+    background-color: rgba(255, 255, 255, 0.233);
+    border-radius: 14px;
+    margin-bottom: 10px;
+}
+
+.navigation.dark header{
+    background-color:rgba(0, 0, 0, 0.217);
+}
+.navigation header::after{
+    position: absolute;
+    content: "";
+    height: 1px;
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0.475);
+    bottom: 0;
+}
+
+.navigation.dark header::after{
+    background-color: rgba(0, 0, 0, 0.432);
+}
+
+
+.navigation.active header {
+    padding: 0;
+    margin-top: 10px;
+    background-color: transparent;
+}
+
+.navigation.active header::after,
+.navigation.active header span{
+    display: none;
+}
+
+.navigation header .profile{
+    height: 50px;
+    aspect-ratio: 1;
+    border-radius:50%;
+    background-color: rgba(0, 0, 0, 0.372);
+}
+
+.profile-img{
+    height: 50px;
+    aspect-ratio: 1;
+    border-radius:50%;
+    object-fit: cover;
+}
+.navigation.active header .profile{
+    height: 40px;
+}
+
+.navigation header span{
+    font-size: 15px;
+}
+.navigation .divider{
+    position: relative;
+    margin: 0 auto;
+    height: 1px;
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0.966);
+}
+
+.navigation.dark .divider{
+    background-color: rgba(0, 0, 0, 0.495);
+}
+
+.navigation .bg-waves{
+    position: absolute;
+    opacity: 0.3;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+.navigation.dark .bg-waves{
+    opacity: 0.5;
+}
+

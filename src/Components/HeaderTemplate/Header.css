@@ -1,0 +1,123 @@
+header{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+    --color:#FF512F;
+}
+header.dark{
+    --color:#7627ff;
+}
+
+header .search-bar{
+    position: relative;
+    width: 25%;
+    display: flex;
+    align-items: center;
+}
+
+header .search-bar input{
+    padding: 8px 16px;
+    border: 1px solid rgb(82,82,82);
+    border-radius: 100px;
+    flex:1;
+    background-color: transparent;
+    font-size: 16px;
+}
+header .search-bar input:focus::placeholder{
+    color:var(--color);
+}
+
+header .search-bar input:focus {
+    outline: none;
+    border: 1px solid var(--color);
+}
+
+
+header .search-bar .icon{
+    position: relative;
+    right: 30px;
+    font-size: 18px;
+    color: rgb(3, 3, 3);
+}
+
+header .search-bar input:focus ~ .icon{
+    color: var(--color);
+}
+
+header .tools{
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+
+header .tools .icon{
+    color: rgb(90, 90, 90);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+header.dark .tools .icon{
+    color: rgb(65, 75, 70);
+}
+
+header .tools .icon:hover{
+    color:var(--color);
+}
+
+header .tools .divider{
+    background-color: var(--color);
+    width: 1px;
+    border-radius:100px;
+    align-self: stretch;
+}
+
+header .tools .user{
+    position: relative;
+    height:30px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 1px solid var(--color);
+    border-color: lightgray;
+    cursor: pointer;
+}
+
+header .tools .user:active{
+    scale: 0.97;
+}
+
+header.dark input{
+    color: white;
+}
+header.dark .search-bar .icon{
+    color: rgb(102, 102, 102);
+}
+
+.user .profile-img {
+    height:100%;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header .search-bar {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    header .search-bar input {
+        width: 100%;
+    }
+
+    header .tools {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}

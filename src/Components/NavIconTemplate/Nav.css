@@ -1,0 +1,34 @@
+.nav{
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    margin-top: 1px;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor:  pointer;
+    scale: 1;
+    transition: background-color .1s ease-in-out;
+    transition:border-radius 0.05s ease;
+    transition:scale 0.5s ease;
+}
+
+.nav:hover{
+    background-color: rgba(255, 255, 255, 0.548);
+    border-radius: 12px;
+    scale: 0.89;
+}
+
+h2{
+    font-size: 15px;
+    font-family: raleway;
+    font-weight: 500;
+}
+.navigation.active h2{
+    display: none;
+}
+
+.icon{
+    font-size: 20px;  
+}
